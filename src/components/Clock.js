@@ -1,5 +1,5 @@
-import React from 'react';
-import FormatDate from './FormatDate';
+import React from "react";
+import FormatDate from "./FormatDate";
 
 export default class Clock extends React.Component {
   constructor(prop) {
@@ -7,14 +7,11 @@ export default class Clock extends React.Component {
 
     this.state = {
       date: new Date()
-    }
+    };
   }
 
   componentDidMount() {
-    this.intervalID = setInterval(
-      () => this.tick(),
-      1000
-    );
+    this.intervalID = setInterval(() => this.tick(), 1000);
   }
 
   componentWillUnmount() {
@@ -32,7 +29,6 @@ export default class Clock extends React.Component {
       <div>
         <FormatDate date={this.state.date} />
       </div>
-    )
+    );
   }
 }
-
